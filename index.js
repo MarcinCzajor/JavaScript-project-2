@@ -5,7 +5,7 @@ const currButton = document.querySelector("#exchange");
 const curSelect = document.querySelector("#cur-select");
 const exchValue = document.querySelector("#exch-value");
 
-const convertCurrency = async () => {
+const convertCurrency = () => {
 	const inputValue = inputCurrency.value;
 	const selectedValue = curSelect.value;
 	fetch(currencyAPI)
@@ -23,7 +23,7 @@ const convertCurrency = async () => {
 			alert(err.message);
 		});
 };
-const validateInputValue = async () => {
+const validateInputValue = () => {
 	if (inputCurrency.value < 1) {
 		alert("wpisz prawidłową wartość");
 
